@@ -32,19 +32,6 @@ This folder structure follows the boilerplate code for the sake of brewity.
     .
     ├── android
     ├── ios
-    ├── scenes
-    │   ├── Apod
-    │   │   ├── __snapshots__
-    │   │   │   └── index.spec.tsx.snap
-    │   │   ├── index.spec.tsx
-    │   │   ├── index.tsx
-    │   │   └── styled.ts
-    │   └── Home
-    │       ├── __snapshots__
-    │       │   └── index.spec.tsx.snap
-    │       ├── index.spec.tsx
-    │       ├── index.tsx
-    │       └── styled.ts
     ├── src
     │   ├── Actions
     │   │   ├── HomeActions - Redux actions specific to HomeScreen
@@ -114,6 +101,11 @@ This folder structure follows the boilerplate code for the sake of brewity.
     │   │   └── store.ts
     │   ├── Router
     │   │   └── index.tsx
+    │   ├── Screens
+    │   │   ├── Home
+    │   │   │   ├── index.spec.ts
+    │   │   │   ├── index.ts
+    │   │   │   └── styled.ts
     │   ├── Services
     │   │   ├── API
     │   │   │   └── LedgisNode

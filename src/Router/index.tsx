@@ -6,7 +6,6 @@ import { createStackNavigator } from "react-navigation-stack";
 import { theme } from "@Definitions/Styled";
 
 import Home from "../Screens/Home";
-import Apod from "../Screens/Apod";
 
 const AppStackNavigator = createStackNavigator({
     Home: {
@@ -18,16 +17,6 @@ const AppStackNavigator = createStackNavigator({
             headerTintColor: "#fff",
         }),
         screen: Home,
-    },
-    Apod: {
-        navigationOptions: () => ({
-            title: "Apod",
-            headerStyle: {
-                backgroundColor: theme.colors.primary,
-            },
-            headerTintColor: "#fff",
-        }),
-        screen: Apod,
     },
 });
 

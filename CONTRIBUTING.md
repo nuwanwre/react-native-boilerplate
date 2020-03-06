@@ -1,0 +1,153 @@
+# Contributing to Ledgis Wallet
+
+The current stack is based on React Native 0.61.5 using Typescript. Incremental versions may utilize newer versions of React Native, please cross-check with `package.json`.
+
+### Core Packages
+ - **Typescript** - A superset of Javascript providing static typing, classes and interfaces.
+ - **React Navigation** - Provides built-in support for navigation between screens.
+ - **Redux** - App wide state management.
+ - **Redux Persist** - Utilizes async storage to persist and rehydrate the redux store.
+ - **Styled Components** - Powerful CSS in JS module providing template literals to support dynamic styling.
+ - **Babel** - Cross platform Javascript transpiler.
+ - **TSLint** - Enforces code styling, and standards. Airbnb's tslint guidelines are followed by default.
+ - **CodePush** - Enables updates to be delivered seamlessley to User devices.
+ - **React Native SVG** - Adds SVG support for React Native applications.
+ - **React Native Bootsplash** - Enables programmatic showing of Splash Screen.
+ - **React i18next** - Integrates i18n with React Native
+ - **Jest and Enzyme** - Testing support for Javascript 
+
+### Running Storybook Server
+
+In addition to above packages, Storybook is also integrated as a development dependency. StoryBook enables developers to test UI components in isolation. To run Storybook server set `IS_STORYBOOK` option in `.env` to `true`. And then, start the application via `react-native run-ios` or `react-native run-android`.
+
+### Updating to Latest Version of React Native 
+
+As of present, the React Native version can be upgraded through `react-native upgrade`. However, on some occasions, this process might introduce breaking changes. If so, please follow the changes specified on React Native upgrade [helper](https://react-native-community.github.io/upgrade-helper/).
+
+### Folder Structure
+
+This folder structure follows the boilerplate code for the sake of brewity. 
+
+```
+    .
+    ├── android
+    ├── ios
+    ├── scenes
+    │   ├── Apod
+    │   │   ├── __snapshots__
+    │   │   │   └── index.spec.tsx.snap
+    │   │   ├── index.spec.tsx
+    │   │   ├── index.tsx
+    │   │   └── styled.ts
+    │   └── Home
+    │       ├── __snapshots__
+    │       │   └── index.spec.tsx.snap
+    │       ├── index.spec.tsx
+    │       ├── index.tsx
+    │       └── styled.ts
+    ├── src
+    │   ├── Actions
+    │   │   ├── HomeActions - Redux actions specific to HomeScreen
+    │   │   │   ├── index.spec.tsx - Testing Specification
+    │   │   │   └── index.ts
+    │   │   └── index.ts
+    │   ├── App.tsx
+    │   ├── Components - Atomic Design inspired folder structure
+    │   │   ├── Atoms
+    │   │   │   ├── TestAtom
+    │   │   │   │   ├── index.tsx
+    │   │   │   │   └── styles.ts
+    │   │   │   └── index.ts
+    │   │   ├── Molecules
+    │   │   │   ├── TestMolecule
+    │   │   │   │   ├── index.tsx
+    │   │   │   │   └── styles.ts
+    │   │   │   └── index.ts
+    │   │   ├── Organisms
+    │   │   │   ├── TestOrganism
+    │   │   │   │   ├── index.tsx
+    │   │   │   │   └── styles.ts
+    │   │   │   └── index.ts
+    │   │   ├── Templates
+    │   │   │   ├── TestTemplate
+    │   │   │   │   ├── index.tsx
+    │   │   │   │   └── styles.ts
+    │   │   │   └── index.ts
+    │   ├── Definitions
+    │   │   ├── ActionConsts
+    │   │   │   ├── index.spec.ts
+    │   │   │   └── index.ts
+    │   │   ├── Styled
+    │   │   │   ├── index.ts
+    │   │   │   └── theme.ts
+    │   │   └── index.ts
+    │   ├── I18n
+    │   │   ├── index.ts
+    │   │   └── locales
+    │   │       ├── en
+    │   │       │   ├── common.json
+    │   │       │   ├── home.json
+    │   │       │   └── index.ts
+    │   │       ├── kr
+    │   │       │   ├── common.json
+    │   │       │   ├── home.json
+    │   │       │   └── index.ts
+    │   │       ├── index.ts
+    │   │       └── tr
+    │   │           ├── common.json
+    │   │           ├── home.json
+    │   │           └── index.ts
+    │   ├── Interfaces
+    │   │   ├── Scenes
+    │   │   │   └── Home.d.ts
+    │   │   ├── index.ts
+    │   │   └── styled.d.ts
+    │   ├── Redux
+    │   │   ├── IAction.d.ts
+    │   │   ├── IStore.d.ts
+    │   │   ├── Reducers
+    │   │   │   ├── home
+    │   │   │   │   ├── index.spec.ts
+    │   │   │   │   └── index.ts
+    │   │   │   └── index.ts
+    │   │   ├── index.ts
+    │   │   └── store.ts
+    │   ├── Router
+    │   │   └── index.tsx
+    │   ├── Services
+    │   │   ├── API
+    │   │   │   └── LedgisNode
+    │   │   │       ├── Http.d.ts
+    │   │   │       ├── index.spec.ts
+    │   │   │       └── index.ts
+    │   │   ├── DeeplinkService.tsx
+    │   │   └── index.ts
+    │   └── Styled
+    │       └── index.tsx
+    ├── static
+    │   └── images
+    │       └── testImage.png
+    ├── storybook
+    │   ├── stories
+    │   │   └── TestAtom.story.tsx
+    │   ├── addons.ts
+    │   ├── index.ts
+    │   ├── rn-addons.ts
+    │   ├── tsconfig.json
+    │   └── webpack.config.js
+    ├── test
+    │   ├── Helpers
+    │   │   └── render.tsx
+    │   ├── jest.setup.ts
+    │   ├── mocks.ts
+    │   └── tsconfig.jest.json
+    ├── tsconfig.json
+    ├── app.json
+    ├── babel.config.js
+    ├── global.d.ts
+    ├── index.js
+    ├── jest.config.js
+    ├── metro.config.js
+    ├── package.json
+    └── yarn.lock
+```

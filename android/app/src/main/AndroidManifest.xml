@@ -14,16 +14,16 @@
         android:name=".MainActivity"
         android:label="@string/app_name"
         android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-        android:windowSoftInputMode="adjustResize">
-         android:exported="true"><!-- add this line -->
+        android:windowSoftInputMode="adjustResize"
+        android:exported="true">
       </activity>
-       <activity
+      <activity
       android:name="com.zoontek.rnbootsplash.RNBootSplashActivity"
-      android:theme="@style/BootTheme"> <!-- apply the theme you created at step 3. -->
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
+      android:theme="@style/BootTheme">
+        <intent-filter>
+          <action android:name="android.intent.action.MAIN" />
+          <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
     </activity>
 
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />

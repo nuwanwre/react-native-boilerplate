@@ -5,4 +5,4 @@ Ledgis Wallet enables users to interact with the Ledgis Blockchain via iOS and A
 
 ### Contributing 
 
-Please refer to CONTRIBUTING.md for instructions on how to contribute to Ledgis Wallet
+Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for instructions on how to contribute to Ledgis Wallet

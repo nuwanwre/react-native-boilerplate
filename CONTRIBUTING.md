@@ -2,11 +2,15 @@
 
 The current stack is based on React Native 0.61.5 using Typescript. Incremental versions may utilize newer versions of React Native, please cross-check with `package.json`.
 
+### Development Workflow
+
+The code base adheres to a Test Driven Design (TDD). Developers may start by adding necessary interfaces first, then implementing respective interfaces together with their tests.
+
 ### Core Packages
  - **Typescript** - A superset of Javascript providing static typing, classes and interfaces.
  - **React Navigation** - Provides built-in support for navigation between screens.
- - **Redux** - App wide state management.
- - **Redux Persist** - Utilizes async storage to persist and rehydrate the redux store.
+ - **Apollo Boost** -Apollo packages that contain core packages to set up an app-wide store manager.
+ - **Apollo Cache Persist** - Utilizes async storage to persist and rehydrate the Apollo store.
  - **Styled Components** - Powerful CSS in JS module providing template literals to support dynamic styling.
  - **Babel** - Cross platform Javascript transpiler.
  - **TSLint** - Enforces code styling, and standards. Airbnb's tslint guidelines are followed by default.

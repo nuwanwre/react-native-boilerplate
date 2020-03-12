@@ -4,13 +4,13 @@ import { Http } from "./index";
 
 describe("Http request tests", () => {
     test("200 test", async () => {
-        const result = await Http.Request<{ success: boolean }>("GET", "/200");
-        expect(result.success).toEqual(true);
+        const result = await Http.Request<{ server_version: string }>("GET", "/v1/chain/get_info");
+        expect(result.server_version).toBeDefined();
     });
 
     test("404 test", async () => {
         try {
-            await Http.Request("GET", "/404");
+            await Http.Request("GET", "");
         } catch (error) {
             expect(error.status).toEqual(404);
         }

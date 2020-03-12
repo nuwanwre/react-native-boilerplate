@@ -19,6 +19,7 @@ module.exports = {
                     "@Services": "./src/Services",
                     "@Redux": "./src/Redux",
                     "@Scenes": "./scenes",
+                    "@Graphql": "./src/Graphql",
                 },
             },
         ],

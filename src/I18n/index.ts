@@ -19,7 +19,7 @@ i18next
     .use(initReactI18next)
     .init({
         fallbackLng: "en",
-        debug: true,
+        debug: false,
         resources: resources.default,
         ns: ["common"],
         defaultNS: "common",

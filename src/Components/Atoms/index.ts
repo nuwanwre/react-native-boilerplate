@@ -1,1 +1,1 @@
-export * from './TestAtom';
+export { TestAtom } from './TestAtom';

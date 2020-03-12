@@ -1,9 +1,10 @@
 // #region Global Imports
 import React, { Component } from "react";
-import { Provider } from "react-redux";
+import { Text } from "react-native";
 import { ThemeProvider } from "styled-components/native";
 import codePush from "react-native-code-push";
 import BootSplash from "react-native-bootsplash";
+import { ApolloProvider } from "@apollo/react-hooks";
 // #endregion Global Imports
 
 // #region Local Imports
@@ -11,7 +12,6 @@ import RouterActions from "@Services/RouterActions";
 import { theme } from "@Definitions/Styled";
 import AppContainer from "@Router";
 import { I18n } from "@I18n";
-import { configureStore } from "@Redux";
 import { SafeArea } from "@Styled";
 // #region Local Imports
 
@@ -20,34 +20,51 @@ import { IS_STORYBOOK } from "react-native-dotenv";
 // Storybook server
 import StoryBookUIRoot from "../storybook";
 
-// Configure Store
-const store = configureStore({});
+// Configure Apollo Client
+import { getApolloClient, TCacheShape } from "@Graphql";
+import { fromPromise } from 'apollo-boost';
 
-class App extends Component<{}> {
+class App extends Component<{}, {client: any}> {
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            client: undefined,
+        }
+    }
+
     public componentDidMount(): void {
         I18n.init();
         BootSplash.hide();
+        getApolloClient().then((c: TCacheShape) => this.setState({client: c}));
     }
 
     public render(): JSX.Element {
-        if (IS_STORYBOOK)
+        const { client } = this.state;
+
+        if (IS_STORYBOOK === "true")
             return (
                 <StoryBookUIRoot />
             )
         else
-            return (
-                <Provider store={store}>
-                    <ThemeProvider theme={theme}>
-                        <SafeArea>
-                            <AppContainer
-                                ref={(ref: object) =>
-                                    RouterActions.setNavigationReference(ref)
-                                }
-                            />
-                        </SafeArea>
-                    </ThemeProvider>
-                </Provider>
-            );
+            if (typeof client === "undefined") {
+                return (
+                    <Text>Loading...</Text>
+                )
+            } else {
+                return (
+                    <ApolloProvider client={client}>
+                        <ThemeProvider theme={theme}>
+                            <SafeArea>
+                                <AppContainer
+                                    ref={(ref: object) =>
+                                        RouterActions.setNavigationReference(ref)
+                                    }
+                                />
+                            </SafeArea>
+                        </ThemeProvider>
+                    </ApolloProvider>
+                );
+            }
     }
 }
 

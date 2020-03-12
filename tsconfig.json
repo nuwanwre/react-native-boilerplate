@@ -35,7 +35,9 @@
             "@Services/*": ["src/Services/*"],
             "@Services": ["src/Services"],
             "@Scenes/*": ["scenes/*"],
-            "@Test/*": ["test/*"]
+            "@Test/*": ["test/*"],
+            "@Graphql/*": ["src/Graphql/*"],
+            "@Graphql": ["src/Graphql"]
         }
     },
     "filesGlob": ["typings/index.d.ts", "src/**/*.ts", "src/**/*.tsx"],

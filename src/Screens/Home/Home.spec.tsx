@@ -1,16 +1,16 @@
 // #region Global Imports
 import * as React from "react";
-import { renderWithProviders } from "@Test/Helpers/render";
+import { shalloWithTheme } from "@Test/Helpers/render";
 // #endregion Global Imports
 
 // #region Local Imports
-import Home from "./index";
+import Home from "./Home.impl";
 // #endregion Local Imports
 
 describe("Scenes", () => {
     describe("Home", () => {
         it("should match snapshot", () => {
-            const wrapper = renderWithProviders(<Home />);
+            const wrapper = shalloWithTheme(<Home />);
 
             expect(wrapper).toMatchSnapshot();
         });

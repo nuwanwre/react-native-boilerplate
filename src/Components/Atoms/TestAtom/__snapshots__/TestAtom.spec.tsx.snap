@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components TestAtom should match snapshot 1`] = `
+<Styled(TouchableOpacity)
+  filled={true}
+>
+  <Text>
+    Test Button
+  </Text>
+</Styled(TouchableOpacity)>
+`;

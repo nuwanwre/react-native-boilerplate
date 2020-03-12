@@ -13,6 +13,9 @@ storiesOf("TestAtom", module)
             </View>
         </ThemeProvider>
     ))
-    .add("regular", () => (
-        <TestAtom />
+    .add("Regular", () => (
+        <TestAtom filled={false}/>
+    ))
+    .add("Filled", () => (
+        <TestAtom filled={true}/>
     ));

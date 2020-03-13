@@ -3,8 +3,10 @@ import ApolloClient from "apollo-boost";
 import { InMemoryCache, NormalizedCacheObject } from "apollo-cache-inmemory";
 import { persistCache } from "apollo-cache-persist";
 
-import { API_URL } from "react-native-dotenv";
+import { GRAPHQL_ENDPOINT } from "react-native-dotenv";
 import { PersistentStorage, PersistedData } from 'apollo-cache-persist/types';
+
+import fetch from "unfetch";
 
 export type TCacheShape = any;
 
@@ -25,7 +27,8 @@ export async function getApolloClient(): Promise<ApolloClient<TCacheShape>> {
 
     const client = new ApolloClient({
         cache,
-        uri: API_URL,
+        uri: GRAPHQL_ENDPOINT,
+        fetch: fetch,
     });
 
     _client = client;

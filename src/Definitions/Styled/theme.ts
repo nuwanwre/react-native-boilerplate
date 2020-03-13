@@ -6,7 +6,8 @@ const screenHeight = Math.round(Dimensions.get("window").height);
 
 const theme: DefaultTheme = {
     colors: {
-        primary: "#2c3e50",
+        primary: "#ffffff",
+        secondary: "#000000",
     },
     dimensions: {
         screenWidth,

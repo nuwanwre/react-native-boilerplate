@@ -37,11 +37,6 @@ This folder structure follows the boilerplate code for the sake of brewity.
     ├── android
     ├── ios
     ├── src
-    │   ├── Actions
-    │   │   ├── HomeActions - Redux actions specific to HomeScreen
-    │   │   │   ├── index.spec.tsx - Testing Specification
-    │   │   │   └── index.ts
-    │   │   └── index.ts
     │   ├── App.tsx
     │   ├── Components - Atomic Design inspired folder structure
     │   │   ├── Atoms

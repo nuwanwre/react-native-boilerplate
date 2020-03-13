@@ -33,32 +33,8 @@ export const Buttons = styled.View`
     color: #4b6c8d;
 `;
 
-export const LocaleButtonText = styled.Text<{ isActive: boolean }>`
-    font-size: 20px;
-    font-weight: 500;
-    color: ${({ isActive }) => (isActive ? "#2c3e50" : "#4b6c8d")};
-`;
-
-export const Apod = styled.View`
-    display: flex;
-    align-items: center;
-`;
-
-export const ApodButton = styled.TouchableOpacity`
-    background: #f9da2e;
-    border-radius: 5px;
-    padding: 5px 10px;
-    color: #2c3e50;
-`;
-
-export const ApodText = styled.Text`
-    font-size: 30px;
-    font-weight: 500;
-    color: ${({ theme }) => theme.colors.primary};
-`;
-
 export const TopText = styled.Text`
-    font-size: 100px;
-    color: #ffffff;
+    font-size: 20px;
+    color: ${({ theme }) => theme.colors.secondary};
     margin-bottom: 10px;
 `;

@@ -6,6 +6,10 @@ The current stack is based on React Native 0.61.5 using Typescript. Incremental 
 
 The code base adheres to a Test Driven Design (TDD). Developers may start by adding necessary interfaces first, then implementing respective interfaces together with their tests.
 
+### Testing
+
+To run existing Test Suites run ```yarn test```. On occasions where some UI component with existing ```__snapshots__``` directory is being updated, run ```yarn test -u``` to update the snapshots.
+
 ### Core Packages
  - **Typescript** - A superset of Javascript providing static typing, classes and interfaces.
  - **React Navigation** - Provides built-in support for navigation between screens.
@@ -18,7 +22,7 @@ The code base adheres to a Test Driven Design (TDD). Developers may start by add
  - **React Native SVG** - Adds SVG support for React Native applications.
  - **React Native Bootsplash** - Enables programmatic showing of Splash Screen.
  - **React i18next** - Integrates i18n with React Native
- - **Jest and Enzyme** - Testing support for Javascript 
+ - **Jest and Enzyme** - Testing support for React based Projects 
 
 ### Running Storybook Server
 
@@ -40,9 +44,13 @@ This folder structure follows the boilerplate code for the sake of brewity.
     │   ├── App.tsx
     │   ├── Components - Atomic Design inspired folder structure
     │   │   ├── Atoms
+    │   │   │   ├── __snapshots__ - Jest generated snapshots of the component
+    │   │   │   │   └── TestAtom.spec.ts.snap
     │   │   │   ├── TestAtom
-    │   │   │   │   ├── index.tsx
-    │   │   │   │   └── styles.ts
+    │   │   │   │   ├── TestAtom.impl.tsx
+    │   │   │   │   ├── TestAtom.interface.tsx
+    │   │   │   │   ├── TestAtom.spec.tsx
+    │   │   │   │   └── index.ts
     │   │   │   └── index.ts
     │   │   ├── Molecules
     │   │   │   ├── TestMolecule
@@ -60,12 +68,15 @@ This folder structure follows the boilerplate code for the sake of brewity.
     │   │   │   │   └── styles.ts
     │   │   │   └── index.ts
     │   ├── Definitions
-    │   │   ├── ActionConsts
-    │   │   │   ├── index.spec.ts
-    │   │   │   └── index.ts
     │   │   ├── Styled
     │   │   │   ├── index.ts
     │   │   │   └── theme.ts
+    │   │   └── index.ts
+    │   ├── Graphql
+    │   │   ├── TestQuery
+    │   │   │   │   ├── TestQuery.spec.ts
+    │   │   │   │   └── TestQuery.ts
+    │   │   ├── apollo.ts
     │   │   └── index.ts
     │   ├── I18n
     │   │   ├── index.ts
@@ -87,17 +98,8 @@ This folder structure follows the boilerplate code for the sake of brewity.
     │   │   ├── Scenes
     │   │   │   └── Home.d.ts
     │   │   ├── index.ts
+    │   │   ├── env.d.ts
     │   │   └── styled.d.ts
-    │   ├── Redux
-    │   │   ├── IAction.d.ts
-    │   │   ├── IStore.d.ts
-    │   │   ├── Reducers
-    │   │   │   ├── home
-    │   │   │   │   ├── index.spec.ts
-    │   │   │   │   └── index.ts
-    │   │   │   └── index.ts
-    │   │   ├── index.ts
-    │   │   └── store.ts
     │   ├── Router
     │   │   └── index.tsx
     │   ├── Screens
@@ -139,6 +141,5 @@ This folder structure follows the boilerplate code for the sake of brewity.
     ├── index.js
     ├── jest.config.js
     ├── metro.config.js
-    ├── package.json
-    └── yarn.lock
+    └── package.json
 ```

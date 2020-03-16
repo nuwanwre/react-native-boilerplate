@@ -1,19 +1,15 @@
-// #region Global Imports
 import React, { Component } from "react";
 import { Text } from "react-native";
 import { ThemeProvider } from "styled-components/native";
 import codePush from "react-native-code-push";
 import BootSplash from "react-native-bootsplash";
 import { ApolloProvider } from "@apollo/react-hooks";
-// #endregion Global Imports
 
-// #region Local Imports
 import RouterActions from "@Services/RouterActions";
 import { theme } from "@Definitions/Styled";
 import AppContainer from "@Router";
 import { I18n } from "@I18n";
 import { SafeArea } from "@Styled";
-// #region Local Imports
 
 import { IS_STORYBOOK } from "react-native-dotenv";
 
@@ -22,7 +18,6 @@ import StoryBookUIRoot from "../storybook";
 
 // Configure Apollo Client
 import { getApolloClient, TCacheShape } from "@Graphql";
-import { fromPromise } from 'apollo-boost';
 
 class App extends Component<{}, {client: any}> {
     constructor(props: any) {

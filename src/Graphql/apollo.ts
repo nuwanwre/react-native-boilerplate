@@ -5,8 +5,9 @@ import { persistCache } from "apollo-cache-persist";
 
 import { GRAPHQL_ENDPOINT } from "react-native-dotenv";
 import { PersistentStorage, PersistedData } from 'apollo-cache-persist/types';
-
 import fetch from "unfetch";
+
+import { handleGraphQLErrors, handleNetworkErrors } from "./Middlewares";
 
 export type TCacheShape = any;
 
@@ -29,6 +30,14 @@ export async function getApolloClient(): Promise<ApolloClient<TCacheShape>> {
         cache,
         uri: GRAPHQL_ENDPOINT,
         fetch: fetch,
+        onError: ({ graphQLErrors, networkError }) => {
+                    if (graphQLErrors) {
+                        handleGraphQLErrors(graphQLErrors);
+                    }
+                    if (networkError) {
+                        handleNetworkErrors(networkError);
+                    }
+        }
     });
 
     _client = client;

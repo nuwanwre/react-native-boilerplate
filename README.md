@@ -25,7 +25,6 @@ Current implementation of the boilerplate uses ```React Native 0.61.5``` togethe
 3. ```yarn start``` to invoke the metro bundler
 4. ```yarn ios``` or ```yarn android``` package on respective emulators/devices.
 
-
 ### Renaming the App
 
 Use ```yarn rename <Appname>``` to rename the app throughout.

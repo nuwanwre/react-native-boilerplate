@@ -7,7 +7,7 @@
 	<key>CodePushPublicKey</key>
 	<string>codepushkey</string>
 	<key>CFBundleDisplayName</key>
-	<string>LedgisWallet</string>
+	<string>boilerplate</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

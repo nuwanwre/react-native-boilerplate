@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'LedgisWallet' do
-  # Pods for LedgisWallet
+target 'boilerplate' do
+  # Pods for boilerplate
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -35,7 +35,7 @@ target 'LedgisWallet' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
 
-  target 'LedgisWalletTests' do
+  target 'boilerplateTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -43,10 +43,10 @@ target 'LedgisWallet' do
   use_native_modules!
 end
 
-target 'LedgisWallet-tvOS' do
-  # Pods for LedgisWallet-tvOS
+target 'boilerplate-tvOS' do
+  # Pods for boilerplate-tvOS
 
-  target 'LedgisWallet-tvOSTests' do
+  target 'boilerplate-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

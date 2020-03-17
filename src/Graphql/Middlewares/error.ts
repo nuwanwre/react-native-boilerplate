@@ -1,8 +1,5 @@
-import { onError, ErrorResponse, ErrorHandler } from "apollo-link-error";
-import { ApolloLink } from "apollo-link";
-import { ApolloClient } from "apollo-boost";
+import { NextLink, Operation } from "apollo-link";
 import { GraphQLError } from 'graphql';
-import { TCacheShape } from '@Graphql/apollo';
 
 /**
  * Middleware for GraphQL requests
@@ -13,12 +10,21 @@ import { TCacheShape } from '@Graphql/apollo';
  * Custom
  *      - useQuery() -> ok, error, data
  */
-export const handleGraphQLErrors = (error: readonly GraphQLError[], client: ApolloClient<TCacheShape>) => {
-    console.log('GraphQLError: ', error);
+export const handleGraphQLErrors = (errors: readonly GraphQLError[], forward: NextLink, operation: Operation) => {
+    console.log('GraphQLError: ', errors);
     // Global error handling goes here
+    errors.forEach((error: GraphQLError) => {
+        if (error.extensions) {
+            if (error.extensions.code === 'UNAUTHENTICATED') {
+                // handle unauthenticated error: 예) refetch Auth Token
+                // use forward(operation) to retry request
+            }
+        }
+    })
 };
 
 export const handleNetworkErrors = (error: Error) => {
     console.log('NetworkError: ', error);
     // Global error handling goes here
+
 };

@@ -1,4 +1,4 @@
-# Contributing to Ledgis Wallet
+# Contributing to the Boiler Plate
 
 The current stack is based on React Native 0.61.5 using Typescript. Incremental versions may utilize newer versions of React Native, please cross-check with `package.json`.
 
@@ -10,23 +10,6 @@ The code base adheres to a Test Driven Design (TDD). Developers may start by add
 
 To run existing Test Suites run ```yarn test```. On occasions where some UI component with existing ```__snapshots__``` directory is being updated, run ```yarn test -u``` to update the snapshots.
 
-### Core Packages
- - **Typescript** - A superset of Javascript providing static typing, classes and interfaces.
- - **React Navigation** - Provides built-in support for navigation between screens.
- - **Apollo Boost** -Apollo packages that contain core packages to set up an app-wide store manager.
- - **Apollo Cache Persist** - Utilizes async storage to persist and rehydrate the Apollo store.
- - **Styled Components** - Powerful CSS in JS module providing template literals to support dynamic styling.
- - **Babel** - Cross platform Javascript transpiler.
- - **TSLint** - Enforces code styling, and standards. Airbnb's tslint guidelines are followed by default.
- - **CodePush** - Enables updates to be delivered seamlessley to User devices.
- - **React Native SVG** - Adds SVG support for React Native applications.
- - **React Native Bootsplash** - Enables programmatic showing of Splash Screen.
- - **React i18next** - Integrates i18n with React Native
- - **Jest and Enzyme** - Testing support for React based Projects 
-
-### Running Storybook Server
-
-In addition to above packages, Storybook is also integrated as a development dependency. StoryBook enables developers to test UI components in isolation. To run Storybook server set `IS_STORYBOOK` option in `.env` to `true`. And then, start the application via `react-native run-ios` or `react-native run-android`.
 
 ### Updating to Latest Version of React Native 
 

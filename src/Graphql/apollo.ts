@@ -31,9 +31,9 @@ export async function getApolloClient(): Promise<ApolloClient<TCacheShape>> {
         cache,
         uri: GRAPHQL_ENDPOINT,
         fetch: fetch,
-        onError: ({ graphQLErrors, networkError }) => {
+        onError: ({ graphQLErrors, networkError, forward, operation }) => {
             if (graphQLErrors) {
-                handleGraphQLErrors(graphQLErrors, client);
+                handleGraphQLErrors(graphQLErrors, forward, operation);
             }
             if (networkError) {
                 handleNetworkErrors(networkError);

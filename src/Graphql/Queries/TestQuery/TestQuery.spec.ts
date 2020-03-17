@@ -56,7 +56,7 @@ describe("GraphQL request tests", () => {
 
             expect(result.data.test[0].text).toEqual(testId);
         }  catch ({ graphQLErrors, networkError }) {
-            console.log('mutation error: ', graphQLErrors[0].message);
+            console.log('mutation error: ', graphQLErrors);
         }
     });
 });

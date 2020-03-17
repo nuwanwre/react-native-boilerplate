@@ -18,6 +18,18 @@ Current implementation of the boilerplate uses ```React Native 0.61.5``` togethe
  - **React i18next** - Integrates i18n with React Native
  - **Jest and Enzyme** - Testing support for React based Projects 
 
+### Running the Boilerplate
+
+1. Run ```yarn``` to install dependencies
+2. ```cd ios && pod install && cd ..``` to install iOS Pods
+3. ```yarn start``` to invoke the metro bundler
+4. ```yarn ios``` or ```yarn android``` package on respective emulators/devices.
+
+
+### Renaming the App
+
+Use ```yarn rename <Appname>``` to rename the app throughout.
+
 ### Running Storybook Server
 
 In addition to above packages, Storybook is also integrated as a development dependency. StoryBook enables developers to test UI components in isolation. To run Storybook server set `IS_STORYBOOK` option in `.env` to `true`. And then, start the application via `react-native run-ios` or `react-native run-android`.

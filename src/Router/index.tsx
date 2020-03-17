@@ -4,8 +4,7 @@ import { createStackNavigator } from "react-navigation-stack";
 
 // Local Imports
 import { theme } from "@Definitions/Styled";
-
-import Home from "../Screens/Home/Home.impl";
+import Home from "@Screens/Home/Home.impl";
 
 const AppStackNavigator = createStackNavigator({
     Home: {

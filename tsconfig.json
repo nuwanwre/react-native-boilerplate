@@ -37,7 +37,9 @@
             "@Scenes/*": ["scenes/*"],
             "@Test/*": ["test/*"],
             "@Graphql/*": ["src/Graphql/*"],
-            "@Graphql": ["src/Graphql"]
+            "@Graphql": ["src/Graphql"],
+            "@Screens/*": ["src/Screens/*"],
+            "@Screens": ["src/Screens"]
         }
     },
     "filesGlob": ["typings/index.d.ts", "src/**/*.ts", "src/**/*.tsx"],

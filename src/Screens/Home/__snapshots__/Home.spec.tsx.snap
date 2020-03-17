@@ -4,6 +4,9 @@ exports[`Scenes Home should match snapshot 1`] = `
 <Styled(View)
   key="1"
 >
+  <Styled(Text)>
+    Home
+  </Styled(Text)>
   <Styled(View)>
     <Styled(View)>
       <TestAtom />

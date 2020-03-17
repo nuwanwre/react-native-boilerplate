@@ -20,7 +20,7 @@ const Home: React.FunctionComponent<IHomePage.IProps> = () => {
             <TopText>{t("home:home")}</TopText>
             <Middle>
                 <Centered>
-                    <TestAtom filled={true}/>
+                    <TestAtom />
                 </Centered>
             </Middle>
         </Container>

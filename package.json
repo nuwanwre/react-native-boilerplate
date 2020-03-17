@@ -11,7 +11,8 @@
     "format": "yarn run lint -- --fix",
     "pretty": "prettier --write --config .prettierrc.js ./{scenes,src}/**/*.{ts,tsx}",
     "clear": "watchman watch-del-all && rm -rf /tmp/metro-bundler-cache-* && rm -rf /tmp/haste-map-react-native-packager-* && react-native start --reset-cache",
-    "storybook": "start-storybook -p 7007"
+    "storybook": "start-storybook -p 7007",
+    "rename": "react-native-rename"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.3",
@@ -83,6 +84,7 @@
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
     "react-dom": "^16.9.0",
     "react-native-dotenv": "^0.2.0",
+    "react-native-rename": "^2.4.1",
     "react-test-renderer": "16.8.6",
     "redux-mock-store": "^1.5.3",
     "typescript": "3.6.2"

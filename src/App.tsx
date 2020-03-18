@@ -7,11 +7,11 @@ import { ApolloProvider } from "@apollo/react-hooks";
 
 import RouterActions from "@Services/RouterActions";
 import { theme } from "@Definitions/Styled";
+import { IS_STORYBOOK } from "react-native-dotenv";
 import AppContainer from "@Router";
 import { I18n } from "@I18n";
 import { SafeArea } from "@Styled";
 
-import { IS_STORYBOOK } from "react-native-dotenv";
 
 // Storybook server
 import StoryBookUIRoot from "../storybook";
@@ -40,12 +40,11 @@ class App extends Component<{}, {client: any}> {
             return (
                 <StoryBookUIRoot />
             )
-        else
-            if (typeof client === "undefined") {
+        if (typeof client === "undefined") {
                 return (
                     <Text>Loading...</Text>
                 )
-            } else {
+            } 
                 return (
                     <ApolloProvider client={client}>
                         <ThemeProvider theme={theme}>
@@ -59,7 +58,7 @@ class App extends Component<{}, {client: any}> {
                         </ThemeProvider>
                     </ApolloProvider>
                 );
-            }
+            
     }
 }
 

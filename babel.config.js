@@ -9,7 +9,6 @@ module.exports = {
             {
                 root: ["."],
                 alias: {
-                    "@Actions": "./src/Actions",
                     "@Components": "./src/Components",
                     "@Styled": "./src/Styled",
                     "@Definitions": "./src/Definitions",
@@ -17,7 +16,6 @@ module.exports = {
                     "@I18n": ["./src/I18n"],
                     "@Router": "./src/Router",
                     "@Services": "./src/Services",
-                    "@Redux": "./src/Redux",
                     "@Scenes": "./scenes",
                     "@Graphql": "./src/Graphql",
                     "@Screens": "./src/Screens",

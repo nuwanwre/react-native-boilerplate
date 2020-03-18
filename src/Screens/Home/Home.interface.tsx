@@ -15,10 +15,4 @@ export namespace IHomePage {
             url: string;
         };
     }
-
-    namespace Actions {
-        export interface IMapPayload {}
-
-        export interface IMapResponse {}
-    }
 }

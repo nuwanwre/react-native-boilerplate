@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useTranslation } from "react-i18next";
 
+import { TestAtom } from '@Components/Atoms';
 import {
     Container,
     TopText,
@@ -8,7 +9,6 @@ import {
     Centered,
 } from "./styled";
 
-import { TestAtom } from '@Components/Atoms';
 import { IHomePage } from "./Home.interface";
 
 

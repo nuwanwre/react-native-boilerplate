@@ -17,7 +17,6 @@
         "baseUrl": ".",
         "resolveJsonModule": true,
         "paths": {
-            "@Actions": ["src/Actions"],
             "@Components/*": ["src/Components/*"],
             "@Components": ["src/Components"],
             "@Definitions/*": ["src/Definitions/*"],
@@ -30,8 +29,6 @@
             "@I18n/*": ["src/I18n/*"],
             "@Router/*": ["src/Router/*"],
             "@Router": ["src/Router"],
-            "@Redux/*": ["src/Redux/*"],
-            "@Redux": ["src/Redux"],
             "@Services/*": ["src/Services/*"],
             "@Services": ["src/Services"],
             "@Scenes/*": ["scenes/*"],

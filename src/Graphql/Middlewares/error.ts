@@ -17,7 +17,7 @@ export const handleGraphQLErrors = (errors: readonly GraphQLError[], forward: Ne
         if (error.extensions) {
             if (error.extensions.code === 'UNAUTHENTICATED') {
                 // handle unauthenticated error: 예) refetch Auth Token
-                // use forward(operation) to retry request
+                forward(operation) // to retry request
             }
         }
     })

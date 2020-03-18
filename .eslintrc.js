@@ -13,9 +13,10 @@ module.exports = {
     rules: {
         "import/no-unresolved": "off",
         "import/prefer-default-export": "off",
+        "no-underscore-dangle": "off",
+        "no-console": "off",
         "react/prop-types": "off",
         "import/no-extraneous-dependencies": [
-            error,
             {
                 devDependencies: [
                     ".storybook/**",

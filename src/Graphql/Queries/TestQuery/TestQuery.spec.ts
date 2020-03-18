@@ -1,7 +1,7 @@
-import { getApolloClient } from "@Graphql";
-import { testInsertMutation, testQuery, testDeleteMutation } from "./TestQuery";
 import { ApolloClient } from 'apollo-boost';
 import { TCacheShape } from '@Graphql/apollo';
+import { getApolloClient } from "@Graphql";
+import { testInsertMutation, testQuery, testDeleteMutation } from "./TestQuery";
 
 let client: ApolloClient<TCacheShape>
 let testId: string;

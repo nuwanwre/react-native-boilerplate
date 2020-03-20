@@ -38,7 +38,7 @@ class App extends Component<{}, {client: any}> {
 
         if (IS_STORYBOOK === "true")
             return (
-                <StoryBookUIRoot />
+                <StoryBookUIRoot /> 
             )
         if (typeof client === "undefined") {
                 return (

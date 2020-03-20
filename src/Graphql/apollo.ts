@@ -9,19 +9,31 @@ import fetch from "unfetch";
 
 import { handleGraphQLErrors, handleNetworkErrors } from "./Middlewares";
 
+import initialState from "./state";
+
 export type TCacheShape = any;
 
 // Cache Apollo Client
 let _client: ApolloClient<TCacheShape>;
+
+async function rehydrateClient(cache: InMemoryCache): Promise<any> {
+    return new Promise<any>((resolve) => {
+        resolve(cache.writeData({ data: initialState}))
+    })
+}
 
 export async function getApolloClient(): Promise<ApolloClient<TCacheShape>> {
     if (_client) return _client;
 
     const cache = new InMemoryCache();
 
+    cache.writeData({
+        data: initialState,
+    })
+
     await persistCache({
         cache,
-        // manual cast on next line as apollo-cache-persist has limited type support
+        // manual cast on next line since apollo-cache-persist has limited type support
         storage: AsyncStorage as PersistentStorage<
             PersistedData<NormalizedCacheObject>
         >,
@@ -40,6 +52,9 @@ export async function getApolloClient(): Promise<ApolloClient<TCacheShape>> {
             }
         },
     });
+
+    // Rehydrate on Client Restore
+    client.onResetStore(() => rehydrateClient(cache));
 
     _client = client;
 

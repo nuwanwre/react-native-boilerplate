@@ -1,28 +1,30 @@
-import { Resolvers } from "apollo-boost";
-import { InMemoryCache } from "apollo-cache-inmemory";
-import gql from "graphql-tag";
+import { Resolver, gql } from 'apollo-boost';
 
-export const testResolver: Resolvers = {
-    Mutation: {
-        testAddToStore: (_root, args, context) => {
-            const cache: InMemoryCache = context.cache;
-
-            let todo: any[] = cache.readQuery<{ cart: string[] }>({
-                query: gql`
-                    query GetTodos {
-                        cart @client
-                    }
-                `,
-            })?.cart;
-
-            cart.push(args.productUuid);
-            cart = Array.from(new Set(cart));
-
-            cache.writeData({ data: { cart } });
-
-            return null;
-
-        }
+const query = gql
+`
+    query getTasks {
+        tasks
     }
-}
+`
+
+export const testGetTasks: Resolver = (_, args, { cache }): any => {
+    try {
+        const queryTaskResult = cache
+            .readQuery({
+                query
+            });
+    
+        if (queryTaskResult) {
+            return queryTaskResult.tasks;
+        }
+
+        return [];
+    } catch(e) {
+        console.log("Resolver encountered an error: ", e);
+        return [];
+    }
+};
+
+
+
 

@@ -1,9 +1,12 @@
 import { Resolvers } from 'apollo-boost';
-import { testGetTasks } from "./TestResolver";
+import { testGetTasks, testAddToTasks } from "./TestResolver";
 
 const resolvers: Resolvers = {
     Query: {
         testGetTasks,
+    },
+    Mutation: {
+        testAddToTasks,
     }
 }
 

@@ -64,8 +64,8 @@ export const testCacheTask = gql
 
 export const testAddTaskToCache = gql
 `
-    mutation TestAddTaskToCache($description: String!, $title: String!, $userId: Int!) {
-        testAddToTasks(description: $description, title: $title, userId: $userId) @client
+    mutation TestAddTaskToCache($description: String!, $title: String!, $taskId: Int!) {
+        testAddToTasks(description: $description, title: $title, taskId: $taskId) @client
     }
 `;
 

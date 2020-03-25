@@ -1,7 +1,7 @@
 import { ApolloClient } from 'apollo-boost';
 import { TCacheShape } from '@Graphql/apollo';
 import { getApolloClient } from "@Graphql";
-import { testInsertUserMutation, testQuery, testUserDeleteMutation, testCachedVisibilityFilter, testInsertTaskMutation, testCacheTask, testTaskDeleteMutation } from "./TestQuery";
+import { testInsertUserMutation, testQuery, testUserDeleteMutation, testCachedVisibilityFilter, testInsertTaskMutation, testCacheTask, testTaskDeleteMutation, testAddTaskToCache } from "./TestQuery";
 
 let client: ApolloClient<TCacheShape>
 let userId: number; 
@@ -79,6 +79,25 @@ describe("GraphQL request tests", () => {
             taskId = result.data.insert_user_tasks.returning[0].task.id;
         } catch ({ graphQLErrors, networkError }) {
             console.log('mutation error: ', graphQLErrors[0].message);
+        }
+    });
+
+    test("Test Query for Writing a Task to Cache", async () => {
+        try {
+            if (taskId) {
+                const result = await client.mutate({
+                    mutation: testAddTaskToCache,
+                    variables: {
+                        description: taskDescription,
+                        title: taskTitle,
+                        taskId
+                    }
+                });
+    
+                expect(result.data.testAddToTasks.length).toBeGreaterThan(0);
+            }
+        } catch ({ graphQLErrors, networkError }) {
+            console.log('mutation error: ', graphQLErrors);
         }
     });
 

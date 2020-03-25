@@ -5,6 +5,6 @@ const initialState = {
         __typename: 'NetworkStatus',
         isConnected: false,
     },
-}
+};
 
 export default initialState;

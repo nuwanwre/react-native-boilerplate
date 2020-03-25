@@ -3,7 +3,7 @@ import {
     DrawerActions,
     NavigationActions,
     StackActions,
-} from "react-navigation";
+} from 'react-navigation';
 
 // Local Imports
 interface INavigator {

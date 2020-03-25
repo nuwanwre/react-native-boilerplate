@@ -1,9 +1,9 @@
 import React from "react";
 import { View } from "react-native";
-import { TestAtom } from "../../src/Components/Atoms";
 import { storiesOf } from "@storybook/react-native";
 import { ThemeProvider } from "styled-components/native";
 import { theme } from "@Definitions/Styled";
+import { TestAtom } from "../../src/Components/Atoms";
 
 storiesOf("TestAtom", module)
     .addDecorator((getStory: any) => (
@@ -17,5 +17,5 @@ storiesOf("TestAtom", module)
         <TestAtom filled={false}/>
     ))
     .add("Filled", () => (
-        <TestAtom filled={true}/>
+        <TestAtom filled/>
     ));

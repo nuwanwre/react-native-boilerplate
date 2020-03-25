@@ -1,16 +1,16 @@
-import AsyncStorage from "@react-native-community/async-storage";
-import ApolloClient from "apollo-boost";
-import { InMemoryCache, NormalizedCacheObject } from "apollo-cache-inmemory";
-import { persistCache } from "apollo-cache-persist";
+import AsyncStorage from '@react-native-community/async-storage';
+import ApolloClient from 'apollo-boost';
+import { InMemoryCache, NormalizedCacheObject } from 'apollo-cache-inmemory';
+import { persistCache } from 'apollo-cache-persist';
 
-import { GRAPHQL_ENDPOINT, HASURA_ADMIN_SECRET } from "react-native-dotenv";
-import { PersistentStorage, PersistedData } from "apollo-cache-persist/types";
-import fetch from "unfetch";
+import { GRAPHQL_ENDPOINT, HASURA_ADMIN_SECRET } from 'react-native-dotenv';
+import { PersistentStorage, PersistedData } from 'apollo-cache-persist/types';
+import fetch from 'unfetch';
 
-import { handleGraphQLErrors, handleNetworkErrors } from "./Middlewares";
-import resolvers from "./Resolvers";
+import { handleGraphQLErrors, handleNetworkErrors } from './Middlewares';
+import resolvers from './Resolvers';
 
-import initialState from "./state";
+import initialState from './state';
 
 export type TCacheShape = any;
 
@@ -18,9 +18,9 @@ export type TCacheShape = any;
 let _client: ApolloClient<TCacheShape>;
 
 async function rehydrateClient(cache: InMemoryCache): Promise<any> {
-    return new Promise<any>((resolve) => {
-        resolve(cache.writeData({ data: initialState}))
-    })
+    return new Promise<any>(resolve => {
+        resolve(cache.writeData({ data: initialState }));
+    });
 }
 
 export async function getApolloClient(): Promise<ApolloClient<TCacheShape>> {
@@ -45,7 +45,7 @@ export async function getApolloClient(): Promise<ApolloClient<TCacheShape>> {
             }
         },
     });
-    
+
     await persistCache({
         cache,
         // manual cast on next line since apollo-cache-persist has limited type support
@@ -56,7 +56,7 @@ export async function getApolloClient(): Promise<ApolloClient<TCacheShape>> {
 
     cache.writeData({
         data: initialState,
-    })
+    });
 
     // Rehydrate on Client Restore
     // client.onResetStore(() => rehydrateClient(cache));

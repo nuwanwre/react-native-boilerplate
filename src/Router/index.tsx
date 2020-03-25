@@ -1,19 +1,19 @@
 // Global Imports
-import { createAppContainer } from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack";
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
 // Local Imports
-import { theme } from "@Definitions/Styled";
-import Home from "@Screens/Home/Home.impl";
+import { theme } from '@Definitions/Styled';
+import Home from '@Screens/Home/Home.impl';
 
 const AppStackNavigator = createStackNavigator({
     Home: {
         navigationOptions: () => ({
-            title: "Home",
+            title: 'Home',
             headerStyle: {
                 backgroundColor: theme.colors.primary,
             },
-            headerTintColor: "#fff",
+            headerTintColor: '#fff',
         }),
         screen: Home,
     },

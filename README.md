@@ -35,6 +35,8 @@ In addition to above packages, Storybook is also integrated as a development dep
 
 ### Testing
 
+Until proper mocks are being added, current testing scenarios make use of a simple Hasura instance. You can find it [here](https://github.com/emperorhan/hasura-boilerplate) and hoist it together with Docker. You may update relevant variables in `.env` before running the tests.
+
 To run existing Test Suites run ```yarn test```. On occasions where some UI component with existing ```__snapshots__``` directory is being updated, run ```yarn test -u``` to update the snapshots.
 
 ### Updating to Latest Version of React Native 
@@ -45,9 +47,9 @@ As of present, the React Native version can be upgraded through `react-native up
 
 This boilerplate was inspired by,
 
-- [Coding Machine](https://github.com/thecodingmachine/react-native-boilerplate)
 - [pankod](https://github.com/pankod/react-native-boilerplate)
 - [ozanmanav](https://github.com/ozanmanav/react-native-boilerplate-ts)
+- [Coding Machine](https://github.com/thecodingmachine/react-native-boilerplate)
 - [React Boilerplate](https://github.com/react-boilerplate/react-boilerplate-typescript)
 
 

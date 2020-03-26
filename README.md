@@ -43,14 +43,6 @@ To run existing Test Suites run ```yarn test```. On occasions where some UI comp
 
 As of present, the React Native version can be upgraded through `react-native upgrade`. However, on some occasions, this process might introduce breaking changes. If so, please follow the changes specified on React Native upgrade [helper](https://react-native-community.github.io/upgrade-helper/).
 
-### Insipration
-
-This boilerplate was inspired by,
-
-- [pankod](https://github.com/pankod/react-native-boilerplate)
-- [ozanmanav](https://github.com/ozanmanav/react-native-boilerplate-ts)
-- [Coding Machine](https://github.com/thecodingmachine/react-native-boilerplate)
-- [React Boilerplate](https://github.com/react-boilerplate/react-boilerplate-typescript)
 
 
 ### Contributing 
@@ -169,3 +161,9 @@ This folder structure follows the boilerplate code for the sake of brewity.
     └── package.json
 ```
 
+### Credits and Inspiration
+
+- [pankod](https://github.com/pankod/react-native-boilerplate)
+- [ozanmanav](https://github.com/ozanmanav/react-native-boilerplate-ts)
+- [Coding Machine](https://github.com/thecodingmachine/react-native-boilerplate)
+- [React Boilerplate](https://github.com/react-boilerplate/react-boilerplate-typescript)

@@ -39,6 +39,10 @@ Until proper mocks are being added, current testing scenarios make use of a simp
 
 To run existing Test Suites run ```yarn test```. On occasions where some UI component with existing ```__snapshots__``` directory is being updated, run ```yarn test -u``` to update the snapshots.
 
+### Validating Commits and Tests
+
+This template also includes a sample workflow to verify merges to master via github actions. You may enable/disable it depending on your use cases. 
+
 ### Updating to Latest Version of React Native 
 
 As of present, the React Native version can be upgraded through `react-native upgrade`. However, on some occasions, this process might introduce breaking changes. If so, please follow the changes specified on React Native upgrade [helper](https://react-native-community.github.io/upgrade-helper/).

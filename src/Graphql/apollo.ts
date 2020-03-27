@@ -54,6 +54,9 @@ export async function getApolloClient(): Promise<ApolloClient<TCacheShape>> {
         >,
     });
 
+    // Selective Persistence should go here
+    // Do a quick trip to localstorage to retain what you need, and clear out the rest
+
     cache.writeData({
         data: initialState,
     });

@@ -92,7 +92,7 @@ This folder structure follows the boilerplate code for the sake of brewity.
     │   │   │   └── styled.ts
     │   ├── Services
     │   │   ├── API
-    │   │   │   └── LedgisNode
+    │   │   │   └── HTTP
     │   │   │       ├── Http.d.ts
     │   │   │       ├── index.spec.ts
     │   │   │       └── index.ts

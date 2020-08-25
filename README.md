@@ -2,7 +2,7 @@
 
 This boilerplate enables developers to bootstrap a React Native application that uses [Hasura](https://hasura.io/) in tandem with [Apollo Graphql](https://www.apollographql.com). 
 
-Current implementation of the boilerplate uses ```React Native 0.61.5``` together with TypeScript.
+Current implementation of the boilerplate uses ```React Native 0.63.2``` together with TypeScript.
 
 ### Core Packages
  - **Typescript** - A superset of Javascript providing static typing, classes and interfaces.

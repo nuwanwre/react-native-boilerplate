@@ -15,23 +15,17 @@
     "rename": "react-native-rename"
   },
   "dependencies": {
-    "@apollo/react-hooks": "^3.1.3",
+    "@apollo/client": "^3.1.3",
     "@react-native-community/async-storage": "^1.6.1",
-    "apollo-boost": "^0.4.7",
-    "apollo-cache-inmemory": "^1.6.5",
     "apollo-cache-persist": "^0.1.1",
-    "apollo-link": "^1.2.13",
-    "apollo-link-error": "^1.1.12",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "graphql": "^14.6.0",
-    "graphql-tag": "^2.10.3",
     "i18next": "^17.0.14",
     "isomorphic-fetch": "^2.2.1",
     "nock": "^11.3.4",
     "query-string": "^6.8.3",
     "react": "16.13.1",
-    "react-apollo": "^3.1.3",
     "react-i18next": "^10.12.4",
     "react-native": "0.63.2",
     "react-native-bootsplash": "^1.0.1",
@@ -45,7 +39,6 @@
     "unfetch": "^4.1.0"
   },
   "devDependencies": {
-    "@apollo/react-testing": "^3.1.3",
     "@babel/core": "^7.8.4",
     "@babel/runtime": "^7.8.4",
     "@react-native-community/eslint-config": "^1.1.0",

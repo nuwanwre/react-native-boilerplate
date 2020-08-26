@@ -3,7 +3,7 @@ import { Text } from "react-native";
 import { ThemeProvider } from "styled-components/native";
 import codePush from "react-native-code-push";
 import BootSplash from "react-native-bootsplash";
-import { ApolloProvider } from "@apollo/react-hooks";
+import { ApolloProvider } from "@apollo/client";
 
 import RouterActions from "@Services/RouterActions";
 import { theme } from "@Definitions/Styled";

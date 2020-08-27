@@ -1,4 +1,4 @@
-import { Todos } from '@Graphql/Models/Todos';
+import { Todos } from '@Apollo/Models/Todos';
 
 export const todosInitialState: Todos = [
     {

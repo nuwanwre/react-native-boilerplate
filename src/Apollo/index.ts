@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client';
-import { GRAPHQL_ENDPOINT } from 'react-native-dotenv';
 
-import initCache from '@Graphql/Cache';
+import initCache from '@Apollo/Cache';
+import { link } from '@Apollo/Middlewares';
 
 export type TCacheShape = any;
 
@@ -13,7 +13,7 @@ export async function getApolloClient(): Promise<ApolloClient<TCacheShape>> {
     const cache: InMemoryCache = await initCache();
 
     const client: ApolloClient<TCacheShape> = new ApolloClient({
-        uri: GRAPHQL_ENDPOINT,
+        link,
         cache,
         connectToDevTools: true,
     });

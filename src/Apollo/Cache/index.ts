@@ -2,7 +2,7 @@ import { NormalizedCacheObject, InMemoryCache, Reference } from '@apollo/client'
 import AsyncStorage from '@react-native-community/async-storage';
 import { persistCache } from 'apollo-cache-persist';
 import { PersistentStorage, PersistedData } from 'apollo-cache-persist/types';
-import { typePolicies } from '@Graphql/TypePolicies';
+import { typePolicies } from '@Apollo/TypePolicies';
 
 let _cache: InMemoryCache;
 

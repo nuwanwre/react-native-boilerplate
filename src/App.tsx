@@ -17,7 +17,7 @@ import { SafeArea } from "@Styled";
 import StoryBookUIRoot from "../storybook";
 
 // Configure Apollo Client
-import { getApolloClient, TCacheShape } from "@Graphql";
+import { getApolloClient, TCacheShape } from "@Apollo";
 
 class App extends Component<{}, {client: any}> {
     constructor(props: any) {

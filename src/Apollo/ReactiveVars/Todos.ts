@@ -3,6 +3,6 @@ import { todosInitialState } from '@Apollo/State/Todos';
 
 import { Todos } from '@Apollo/Models/Todos';
 
-export const todoVar: ReactiveVar<Todos> = makeVar<Todos>(
+export const todosVar: ReactiveVar<Todos> = makeVar<Todos>(
     todosInitialState
 )

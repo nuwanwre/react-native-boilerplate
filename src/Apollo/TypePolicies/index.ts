@@ -1,6 +1,6 @@
 import { TypePolicies } from '@apollo/client';
 
-import { todoVar } from '@Apollo/ReactiveVars/Todos';
+import { todosVar } from '@Apollo/ReactiveVars/Todos';
 import { visibilityFilterVar } from '@Apollo/ReactiveVars/VisibilityFilters';
 
 export const typePolicies: TypePolicies = {
@@ -8,7 +8,7 @@ export const typePolicies: TypePolicies = {
         fields: {
             todos: {
                 read () {
-                    return todoVar();
+                    return todosVar();
                 }
             },
             visibilityFilter: {

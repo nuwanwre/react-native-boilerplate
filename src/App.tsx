@@ -3,7 +3,7 @@ import { Text } from "react-native";
 import { ThemeProvider } from "styled-components/native";
 import codePush from "react-native-code-push";
 import BootSplash from "react-native-bootsplash";
-import { ApolloProvider } from "@apollo/react-hooks";
+import { ApolloProvider } from "@apollo/client";
 
 import RouterActions from "@Services/RouterActions";
 import { theme } from "@Definitions/Styled";
@@ -17,7 +17,7 @@ import { SafeArea } from "@Styled";
 import StoryBookUIRoot from "../storybook";
 
 // Configure Apollo Client
-import { getApolloClient, TCacheShape } from "@Graphql";
+import { getApolloClient, TCacheShape } from "@Apollo";
 
 class App extends Component<{}, {client: any}> {
     constructor(props: any) {

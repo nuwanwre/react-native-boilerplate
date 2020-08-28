@@ -33,8 +33,8 @@
             "@Services": ["src/Services"],
             "@Scenes/*": ["scenes/*"],
             "@Test/*": ["test/*"],
-            "@Graphql/*": ["src/Graphql/*"],
-            "@Graphql": ["src/Graphql"],
+            "@Apollo/*": ["src/Apollo/*"],
+            "@Apollo": ["src/Apollo"],
             "@Screens/*": ["src/Screens/*"],
             "@Screens": ["src/Screens"]
         }

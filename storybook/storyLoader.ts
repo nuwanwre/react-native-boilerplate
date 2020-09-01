@@ -1,8 +1,8 @@
-const loadStories = () => {
+export const loadStories = () => {
     require('./stories/TestAtom.story');
 };
 
-const stories = [
+export const stories = [
     './stories/TestAtom.story'
 ];
 

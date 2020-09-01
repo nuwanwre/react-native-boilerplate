@@ -1,62 +1,39 @@
-// Global Imports
+import React, { RefObject } from 'react';
 import {
     DrawerActions,
-    NavigationActions,
+    CommonActions,
     StackActions,
-} from 'react-navigation';
+    NavigationContainerRef
+} from '@react-navigation/native';
 
-// Local Imports
-interface INavigator {
-    dispatch: Function;
-}
-let navigatorRef: INavigator;
-let stack: Array<object> = [];
+let navigatorRef: NavigationContainerRef | null;
 
 export const RouterActions = {
-    setNavigationReference: (navigation: INavigator): void => {
-        navigatorRef = navigation;
+    setNavigationReference: (navigation: RefObject<NavigationContainerRef>): void => {
+        navigatorRef = navigation.current || null;
     },
     push: (screen: string, props: object = {}): void => {
-        stack.push({
-            routeName: screen,
-            params: props,
-        });
-
-        navigatorRef.dispatch(
-            NavigationActions.navigate({
-                params: props,
-                routeName: screen,
-            })
+        navigatorRef?.dispatch(
+            StackActions.push(screen, props)
         );
     },
     replace: (screen: string, props: object = {}): void => {
-        stack = [
-            {
-                routeName: screen,
-                params: props,
-            },
-        ];
-
-        const resetAction = StackActions.reset({
-            index: 0,
-            actions: [
-                NavigationActions.navigate({
-                    routeName: screen,
-                    params: props,
-                }),
-            ],
-        });
-        navigatorRef.dispatch(resetAction);
+        navigatorRef?.dispatch(
+            StackActions.replace(screen, props)
+        );
     },
     pop: (): void => {
-        stack.pop();
-
-        const backAction = NavigationActions.back();
-        navigatorRef.dispatch(backAction);
+        navigatorRef?.dispatch(
+            StackActions.pop(1)
+        );
     },
-    currentState: (): object => stack[stack.length - 1],
+    popToTop: (): void => {
+        navigatorRef?.dispatch(
+            StackActions.popToTop()
+        );
+    },
     drawerToggle: (): void => {
-        navigatorRef.dispatch(DrawerActions.toggleDrawer());
+        navigatorRef?.dispatch(DrawerActions.toggleDrawer());
     },
 };
 

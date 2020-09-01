@@ -1,65 +1,46 @@
-import React, { Component } from "react";
+import React, {useState, useEffect } from "react";
 import { Text } from "react-native";
 import { ThemeProvider } from "styled-components/native";
 import codePush from "react-native-code-push";
 import BootSplash from "react-native-bootsplash";
-import { ApolloProvider } from "@apollo/client";
+import { ApolloProvider, ApolloClient } from "@apollo/client";
 
-import RouterActions from "@Services/RouterActions";
 import { theme } from "@Definitions/Styled";
 import { IS_STORYBOOK } from "react-native-dotenv";
-import AppContainer from "@Router";
+import { AppContainer, navigationRef, rootStack } from "@Router";
 import { I18n } from "@I18n";
 import { SafeArea } from "@Styled";
 
-
-// Storybook server
 import StoryBookUIRoot from "../storybook";
 
-// Configure Apollo Client
 import { getApolloClient, TCacheShape } from "@Apollo";
 
-class App extends Component<{}, {client: any}> {
-    constructor(props: any) {
-        super(props);
-        this.state = {
-            client: undefined,
-        }
-    }
+const App: React.FC = () => {
+    const [apolloClient, setApolloClient] = useState<ApolloClient<TCacheShape>>();
 
-    public componentDidMount(): void {
+    useEffect(() => {
         I18n.init();
         BootSplash.hide();
-        getApolloClient().then((c: TCacheShape) => this.setState({client: c}));
+        getApolloClient().then((c: TCacheShape) => setApolloClient(c))
+    }, []);
+
+    if (IS_STORYBOOK === 'true') {
+        return <StoryBookUIRoot />
     }
 
-    public render(): JSX.Element {
-        const { client } = this.state;
+    if (!apolloClient) {
+        return <Text>Loading...</Text>
+    } 
 
-        if (IS_STORYBOOK === "true")
-            return (
-                <StoryBookUIRoot /> 
-            )
-        if (typeof client === "undefined") {
-                return (
-                    <Text>Loading...</Text>
-                )
-            } 
-                return (
-                    <ApolloProvider client={client}>
-                        <ThemeProvider theme={theme}>
-                            <SafeArea>
-                                <AppContainer
-                                    ref={(ref: object) =>
-                                        RouterActions.setNavigationReference(ref)
-                                    }
-                                />
-                            </SafeArea>
-                        </ThemeProvider>
-                    </ApolloProvider>
-                );
-            
-    }
+    return (
+        <ApolloProvider client={apolloClient}>
+            <ThemeProvider theme={theme}>
+                <SafeArea>
+                    <AppContainer />
+                </SafeArea>
+            </ThemeProvider>
+        </ApolloProvider>
+    )
 }
 
 const codePushOptions = { checkFrequency: codePush.CheckFrequency.MANUAL };

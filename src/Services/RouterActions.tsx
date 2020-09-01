@@ -1,7 +1,6 @@
 import React, { RefObject } from 'react';
 import {
     DrawerActions,
-    CommonActions,
     StackActions,
     NavigationContainerRef
 } from '@react-navigation/native';

@@ -10,8 +10,6 @@ import {
 } from "./styled";
 
 import { IHomePage } from "./Home.interface";
-import { TouchableOpacity, Text } from 'react-native';
-import RouterActions from '@Services/RouterActions';
 
 
 const Home: React.FunctionComponent<IHomePage.IProps> = () => {
@@ -23,9 +21,6 @@ const Home: React.FunctionComponent<IHomePage.IProps> = () => {
             <Middle>
                 <Centered>
                     <TestAtom />
-                    <TouchableOpacity onPress={() => RouterActions.replace('Test')}> 
-                        <Text>Screen Test</Text>
-                    </TouchableOpacity>
                 </Centered>
             </Middle>
         </Container>

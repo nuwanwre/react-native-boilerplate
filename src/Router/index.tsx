@@ -1,5 +1,8 @@
 import React, { useEffect, createRef } from 'react';
-import { NavigationContainer, NavigationContainerRef } from '@react-navigation/native';
+import {
+    NavigationContainer,
+    NavigationContainerRef,
+} from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import { theme } from '@Definitions/Styled';
@@ -12,9 +15,7 @@ const Stack = createStackNavigator();
 
 export const rootStack = () => {
     return (
-        <Stack.Navigator
-            initialRouteName="Home"
-        >
+        <Stack.Navigator initialRouteName="Home">
             <Stack.Screen
                 name="Home"
                 component={Home}
@@ -27,17 +28,17 @@ export const rootStack = () => {
                 }}
             />
         </Stack.Navigator>
-    )
-}
+    );
+};
 
-export const AppContainer  = () => {
+export const AppContainer = () => {
     useEffect(() => {
         RouterActions.setNavigationReference(navigationRef);
-    }, [])
+    }, []);
 
     return (
         <NavigationContainer ref={navigationRef}>
-            { rootStack() }
+            {rootStack()}
         </NavigationContainer>
-    ) 
-}
+    );
+};

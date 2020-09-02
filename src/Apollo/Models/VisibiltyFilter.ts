@@ -1,18 +1,18 @@
 export type VisibilityFilter = {
     id: string;
     displayName: string;
-}
-export const VisibilityFilters: { [filter: string]: VisibilityFilter } =  {
+};
+export const VisibilityFilters: { [filter: string]: VisibilityFilter } = {
     SHOW_ALL: {
         id: 'show_all',
-        displayName: 'All'
+        displayName: 'All',
     },
     SHOW_COMPLETED: {
-        id: "show_completed",
-        displayName: "Completed"
+        id: 'show_completed',
+        displayName: 'Completed',
     },
     SHOW_ACTIVE: {
-        id: "show_active",
-        displayName: "Active"
-    }
-}
+        id: 'show_active',
+        displayName: 'Active',
+    },
+};

@@ -7,19 +7,15 @@ export const typePolicies: TypePolicies = {
     Query: {
         fields: {
             todos: {
-                read () {
+                read() {
                     return todosVar();
-                }
+                },
             },
             visibilityFilter: {
-                read () {
+                read() {
                     return visibilityFilterVar();
-                }
-            }
-        }
-    }
+                },
+            },
+        },
+    },
 };
-
-
-
-

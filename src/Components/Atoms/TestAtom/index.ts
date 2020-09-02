@@ -1,1 +1,1 @@
-export { TestAtom } from "./TestAtom.impl";
+export { TestAtom } from './TestAtom.impl';

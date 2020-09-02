@@ -1,3 +1,3 @@
-import Home from "./Home.impl";
+import Home from './Home.impl';
 
 export default Home;

@@ -1,4 +1,4 @@
-import { WithTranslation } from "react-i18next";
+import { WithTranslation } from 'react-i18next';
 
 export namespace IHomePage {
     export interface IProps extends WithTranslation {}

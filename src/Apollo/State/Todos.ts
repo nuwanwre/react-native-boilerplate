@@ -4,6 +4,6 @@ export const todosInitialState: Todos = [
     {
         id: 0,
         completed: false,
-        text: 'Welcome to React Native Boilerplate'
-    }
-]
+        text: 'Welcome to React Native Boilerplate',
+    },
+];

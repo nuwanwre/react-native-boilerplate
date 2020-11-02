@@ -2227,10 +2227,10 @@
     pretty-hrtime "^1.0.3"
     regenerator-runtime "^0.13.3"
 
-"@storybook/react-native-server@5.3.21":
-  version "5.3.21"
-  resolved "https://registry.yarnpkg.com/@storybook/react-native-server/-/react-native-server-5.3.21.tgz#6733d17534cb42740b6686ba02b2afc14b506f51"
-  integrity sha512-M/XspPkR+vCUt9ym/C6CwxbyKLNbvho+MHpVdIiXB9ajew0nEoBVUpN6TAKwyqiOhJP68KJ8vyQ96xixJypfcg==
+"@storybook/react-native-server@5.3.23":
+  version "5.3.23"
+  resolved "https://registry.yarnpkg.com/@storybook/react-native-server/-/react-native-server-5.3.23.tgz#27ef61a74ec991b3d56690cd1dd9eba30718f3a5"
+  integrity sha512-1jGHwikc6BVoEW8tdJeYvnY1N2+cHyzit9xiXL9WXofiiYERoL4ENj1pgVp+AGA+yUYBsuSzeN7Hqp/LwdJ1Ug==
   dependencies:
     "@storybook/addons" "5.3.21"
     "@storybook/api" "5.3.21"

@@ -12,17 +12,17 @@ export const typePolicies: TypePolicies = {
                     if (!existing) return [];
                     return existing;
                 },
-                merge(existing = [], incoming: Todo[]) {
+                merge(existing = [], incoming: Todo) {
                     let duplicate = false;
 
                     existing.map((item: Todo) => {
-                        if (incoming[0].id === item.id) {
+                        if (incoming.id === item.id) {
                             duplicate = true;
                             return;
                         }
                     });
                     if (duplicate) return [...existing];
-                    return [...existing, ...incoming];
+                    return [...existing, incoming];
                 },
             },
             visibilityFilter: {

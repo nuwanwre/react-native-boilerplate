@@ -16,12 +16,12 @@
         "pods": "cd ios && pod install && cd .."
     },
     "dependencies": {
-        "@apollo/client": "3.1.4",
+        "@apollo/client": "3.2.5",
         "@react-native-community/async-storage": "1.12.0",
         "@react-native-community/masked-view": "0.1.10",
         "@react-navigation/native": "5.7.3",
         "@react-navigation/stack": "5.9.0",
-        "apollo-cache-persist": "0.1.1",
+        "apollo3-cache-persist": "^0.8.0",
         "graphql": "15.3.0",
         "i18next": "17.3.1",
         "isomorphic-fetch": "2.2.1",

@@ -2,21 +2,21 @@
 # yarn lockfile v1
 
 
-"@apollo/client@3.1.4":
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.1.4.tgz#2848a9f29619275df9af55966c4f5984e31cea6e"
-  integrity sha512-XPZ2eL+0GN25FazEOAVAvEyAzWPVsHeo+DgG/45d4Rb+srzPN+vmRgpQL5TdX2BYJoPd04J/g8OZwYUEKL8laA==
+"@apollo/client@3.2.5":
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.2.5.tgz#24e0a6faa1d231ab44807af237c6227410c75c4d"
+  integrity sha512-zpruxnFMz6K94gs2pqc3sidzFDbQpKT5D6P/J/I9s8ekHZ5eczgnRp6pqXC86Bh7+44j/btpmOT0kwiboyqTnA==
   dependencies:
+    "@graphql-typed-document-node/core" "^3.0.0"
     "@types/zen-observable" "^0.8.0"
     "@wry/context" "^0.5.2"
     "@wry/equality" "^0.2.0"
     fast-json-stable-stringify "^2.0.0"
     graphql-tag "^2.11.0"
     hoist-non-react-statics "^3.3.2"
-    optimism "^0.12.1"
+    optimism "^0.13.0"
     prop-types "^15.7.2"
-    symbol-observable "^1.2.0"
-    terser "^5.2.0"
+    symbol-observable "^2.0.0"
     ts-invariant "^0.4.4"
     tslib "^1.10.0"
     zen-observable "^0.8.14"
@@ -1179,6 +1179,11 @@
   version "0.2.5"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
+
+"@graphql-typed-document-node/core@^3.0.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@graphql-typed-document-node/core/-/core-3.1.0.tgz#0eee6373e11418bfe0b5638f654df7a4ca6a3950"
+  integrity sha512-wYn6r8zVZyQJ6rQaALBEln5B1pzxb9shV5Ef97kTvn6yVGrqyXVnDqnU24MXnFubR+rZjBY9NWuxX3FB2sTsjg==
 
 "@hapi/address@2.x.x":
   version "2.1.4"
@@ -3226,10 +3231,10 @@ anymatch@^3.0.3, anymatch@~3.1.1:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
-apollo-cache-persist@0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/apollo-cache-persist/-/apollo-cache-persist-0.1.1.tgz#e6cfe1983b998982a679aaf05241d3ed395edb1e"
-  integrity sha512-/7GAyblPR169ryW3ugbtHqiU0UGkhIt10NeaO2gn2ClxjLHF/nIkJD5mx/0OCF2vLNbbnzLZVDeIO1pf72TrEA==
+apollo3-cache-persist@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/apollo3-cache-persist/-/apollo3-cache-persist-0.8.0.tgz#4a88d67bace5ae4cbc3182ae98f35ecddf793586"
+  integrity sha512-f8BpEEcOV9f4bZuIE0pp+JmCa4o8950PbVIO8ByLPbUgpscfw7u8HXHXc/50belbTvJbc+gKs2wkVSfKzRlBbQ==
 
 app-root-dir@^1.0.2:
   version "1.0.2"
@@ -10191,10 +10196,10 @@ open@^7.0.0:
     is-docker "^2.0.0"
     is-wsl "^2.1.1"
 
-optimism@^0.12.1:
-  version "0.12.2"
-  resolved "https://registry.yarnpkg.com/optimism/-/optimism-0.12.2.tgz#de9dc3d2c914d7b34e08957a768967c0605beda9"
-  integrity sha512-k7hFhlmfLl6HNThIuuvYMQodC1c+q6Uc6V9cLVsMWyW514QuaxVJH/khPu2vLRIoDTpFdJ5sojlARhg1rzyGbg==
+optimism@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/optimism/-/optimism-0.13.0.tgz#c08904e1439a0eb9e7f86183dafa06cc715ff351"
+  integrity sha512-6JAh3dH+YUE4QUdsgUw8nUQyrNeBKfAEKOHMlLkQ168KhIYFIxzPsHakWrRXDnTO+x61RJrS3/2uEt6W0xlocA==
   dependencies:
     "@wry/context" "^0.5.2"
 
@@ -12405,7 +12410,7 @@ source-map-resolve@^0.5.0, source-map-resolve@^0.5.2:
     source-map-url "^0.4.0"
     urix "^0.1.0"
 
-source-map-support@^0.5.16, source-map-support@^0.5.3, source-map-support@^0.5.6, source-map-support@~0.5.12, source-map-support@~0.5.19:
+source-map-support@^0.5.16, source-map-support@^0.5.3, source-map-support@^0.5.6, source-map-support@~0.5.12:
   version "0.5.19"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.19.tgz#a98b62f86dcaf4f67399648c085291ab9e8fed61"
   integrity sha512-Wonm7zOCIJzBGQdB+thsPar0kYuCIzYvxZwlBa87yi/Mdjv7Tip2cyVbLj5o0cFPN4EVkuTwb3GDDyUx2DGnGw==
@@ -12428,7 +12433,7 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
-source-map@^0.7.3, source-map@~0.7.2:
+source-map@^0.7.3:
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
   integrity sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==
@@ -12871,10 +12876,10 @@ symbol-observable@1.0.1:
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.1.tgz#8340fc4702c3122df5d22288f88283f513d3fdd4"
   integrity sha1-g0D8RwLDEi310iKI+IKD9RPT/dQ=
 
-symbol-observable@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
-  integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==
+symbol-observable@^2.0.0:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-2.0.3.tgz#5b521d3d07a43c351055fa43b8355b62d33fd16a"
+  integrity sha512-sQV7phh2WCYAn81oAkakC5qjq2Ml0g8ozqz03wOGnx9dDlG1de6yrF+0RAzSJD8fPUow3PTSMf2SAbOGxb93BA==
 
 symbol-tree@^3.2.2:
   version "3.2.4"
@@ -12977,15 +12982,6 @@ terser@^4.1.2, terser@^4.6.12, terser@^4.6.3:
     commander "^2.20.0"
     source-map "~0.6.1"
     source-map-support "~0.5.12"
-
-terser@^5.2.0:
-  version "5.3.8"
-  resolved "https://registry.yarnpkg.com/terser/-/terser-5.3.8.tgz#991ae8ba21a3d990579b54aa9af11586197a75dd"
-  integrity sha512-zVotuHoIfnYjtlurOouTazciEfL7V38QMAOhGqpXDEg6yT13cF4+fEP9b0rrCEQTn+tT46uxgFsTZzhygk+CzQ==
-  dependencies:
-    commander "^2.20.0"
-    source-map "~0.7.2"
-    source-map-support "~0.5.19"
 
 test-exclude@^6.0.0:
   version "6.0.0"

@@ -1,11 +1,6 @@
-import {
-    NormalizedCacheObject,
-    InMemoryCache,
-    Reference,
-} from '@apollo/client';
+import { InMemoryCache } from '@apollo/client';
 import AsyncStorage from '@react-native-community/async-storage';
-import { persistCache } from 'apollo-cache-persist';
-import { PersistentStorage, PersistedData } from 'apollo-cache-persist/types';
+import { persistCache } from 'apollo3-cache-persist';
 import { typePolicies } from '@Apollo/TypePolicies';
 
 let _cache: InMemoryCache;
@@ -19,13 +14,10 @@ const initCache = async (): Promise<InMemoryCache> => {
 
     await persistCache({
         cache,
-        storage: AsyncStorage as PersistentStorage<
-            PersistedData<NormalizedCacheObject>
-        >,
+        storage: AsyncStorage,
         debug: true,
     });
 
-    // Return persisted cache if exists, else bring cache to initial state
     return cache;
 };
 

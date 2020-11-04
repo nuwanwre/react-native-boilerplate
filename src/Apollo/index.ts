@@ -2,6 +2,7 @@ import { ApolloClient, InMemoryCache } from '@apollo/client';
 
 import getCache from '@Apollo/Cache';
 import { link } from '@Apollo/Middlewares';
+import typeDefs from '@Apollo/TypeDefs';
 
 export type TCacheShape = any;
 
@@ -16,6 +17,7 @@ export async function getApolloClient(): Promise<ApolloClient<TCacheShape>> {
         link,
         cache,
         connectToDevTools: true,
+        typeDefs,
     });
 
     _client = client;

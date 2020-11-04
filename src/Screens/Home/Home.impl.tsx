@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useQuery, useMutation } from '@apollo/client';
+import { useQuery, useMutation, gql, useReactiveVar } from '@apollo/client';
 import { View, TouchableOpacity, Text } from 'react-native';
 
 import { TestAtom } from '@Components/Atoms';
@@ -9,34 +9,38 @@ import { Container, TopText, Middle, Centered } from './styled';
 import { IHomePage } from './Home.interface';
 
 import { getAllTodos } from '@Apollo/Operations/Queries/getAllTodos';
-import { getApolloClient } from '@Apollo';
-// import getCache from '@Apollo/Cache'
+import { todoMutations } from '@Apollo/Operations/Mutations';
+
+const addTodoMutation = gql`
+    mutation AddTodo($id: Int!, $text: String!, $completed: Boolean) {
+        todos(id: $id, text: $text, completed: $completed) @client {
+            id
+            text
+            completed
+        }
+    }
+`;
 
 const Home: React.FunctionComponent<IHomePage.IProps> = () => {
     const { t } = useTranslation();
     const todos = useQuery(getAllTodos);
+    const [addTodo] = useMutation(addTodoMutation);
     const [currentItems, setCurrentItems] = useState(0);
 
     useEffect(() => {
-        console.log(todos.data);
         setCurrentItems(todos.data.todos.length);
     }, [todos.data]);
 
     const writeToCache = async () => {
-        (await getApolloClient()).writeQuery({
-            query: getAllTodos,
-            data: {
-                todos: {
-                    id: currentItems + 1,
-                    text: `Added item ${currentItems + 1}`,
-                    completed: false,
-                },
-            },
-        });
+        todoMutations.addTodo(`Added item ${currentItems + 1}`);
+    };
+
+    const deleteFromCache = async () => {
+        todoMutations.deleteTodo(currentItems);
     };
 
     const readFromCache = () => {
-        console.log(todos.data.todos);
+        console.log(todos.data);
     };
 
     return (
@@ -58,6 +62,14 @@ const Home: React.FunctionComponent<IHomePage.IProps> = () => {
                             readFromCache();
                         }}>
                         <Text>Read Items</Text>
+                    </TouchableOpacity>
+                </View>
+                <View>
+                    <TouchableOpacity
+                        onPress={() => {
+                            deleteFromCache();
+                        }}>
+                        <Text>Delete Last Item</Text>
                     </TouchableOpacity>
                 </View>
                 <Centered>

@@ -1,6 +1,7 @@
-import { todosVar } from '@Apollo/ReactiveVars/Todos';
 import createAddTodo from './addTodo/addTodo';
+import deleteTodo from './deleteTodo/deleteTodo';
 
 export const todoMutations = {
-    addTodo: createAddTodo(todosVar),
+    addTodo: async (text: string) => await createAddTodo(text),
+    deleteTodo: async (id: number) => await deleteTodo(id),
 };

@@ -9,20 +9,9 @@ export const typePolicies: TypePolicies = {
         fields: {
             todos: {
                 read(existing: Todo[]) {
+                    console.log('reading~');
                     if (!existing) return [];
                     return existing;
-                },
-                merge(existing = [], incoming: Todo[]) {
-                    let duplicate = false;
-
-                    existing.map((item: Todo) => {
-                        if (incoming[0].id === item.id) {
-                            duplicate = true;
-                            return;
-                        }
-                    });
-                    if (duplicate) return [...existing];
-                    return [...existing, ...incoming];
                 },
             },
             visibilityFilter: {

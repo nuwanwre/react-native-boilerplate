@@ -5,7 +5,7 @@ import { typePolicies } from '@Apollo/TypePolicies';
 
 let _cache: InMemoryCache;
 
-const initCache = async (): Promise<InMemoryCache> => {
+const getCache = async (): Promise<InMemoryCache> => {
     if (_cache) return _cache;
 
     const cache: InMemoryCache = new InMemoryCache({
@@ -21,4 +21,4 @@ const initCache = async (): Promise<InMemoryCache> => {
     return cache;
 };
 
-export default initCache;
+export default getCache;

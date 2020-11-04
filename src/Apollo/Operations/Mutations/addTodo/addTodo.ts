@@ -1,7 +1,9 @@
-import { ReactiveVar } from '@apollo/client';
 import { Todos, Todo } from '@Apollo/Models/Todos';
 
-const createAddTodo = (todosVar: ReactiveVar<Todos>) => {
+import { getAllTodos } from '@Apollo/Operations/Queries/getAllTodos';
+import { getApolloClient } from '@Apollo';
+
+const createAddTodo = async (text: string) => {
     const createNewTodoId = (allTodos: Todos) => {
         return (
             allTodos.reduce(
@@ -11,14 +13,47 @@ const createAddTodo = (todosVar: ReactiveVar<Todos>) => {
         );
     };
 
-    const createNewTodo = (text: string, allTodos: Todos) => {
-        return { text, completed: false, id: createNewTodoId(allTodos) };
+    const createNewTodo = async (text: string) => {
+        const client = await getApolloClient();
+
+        let persistedTodos: any = await client.readQuery({
+            query: getAllTodos,
+        });
+
+        let newTodoId = 0;
+        let todos;
+
+        if (persistedTodos) {
+            newTodoId = createNewTodoId(persistedTodos.todos);
+            todos = [
+                ...persistedTodos.todos,
+                {
+                    id: newTodoId,
+                    text: `Added item ${newTodoId}`,
+                    completed: false,
+                },
+            ];
+        } else {
+            todos = [
+                {
+                    id: newTodoId,
+                    text: `Added item ${newTodoId}`,
+                    completed: false,
+                },
+            ];
+        }
+
+        client.writeQuery({
+            query: getAllTodos,
+            data: {
+                todos,
+            },
+        });
+
+        return { text, completed: false, id: newTodoId };
     };
 
-    return (text: string) => {
-        const allTodos = todosVar();
-        todosVar(allTodos.concat([createNewTodo(text, allTodos)]));
-    };
+    await createNewTodo(text);
 };
 
 export default createAddTodo;

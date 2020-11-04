@@ -3259,7 +3259,7 @@ anymatch@^3.0.3, anymatch@~3.1.1:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
-apollo3-cache-persist@^0.8.0:
+apollo3-cache-persist@0.8.0:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/apollo3-cache-persist/-/apollo3-cache-persist-0.8.0.tgz#4a88d67bace5ae4cbc3182ae98f35ecddf793586"
   integrity sha512-f8BpEEcOV9f4bZuIE0pp+JmCa4o8950PbVIO8ByLPbUgpscfw7u8HXHXc/50belbTvJbc+gKs2wkVSfKzRlBbQ==

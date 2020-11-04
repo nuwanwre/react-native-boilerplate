@@ -73,7 +73,7 @@
         "jest": "25.5.4",
         "jest-styled-components": "6.3.4",
         "jsdom": "15.2.1",
-        "metro-react-native-babel-preset": "0.59.0",
+        "metro-react-native-babel-preset": "0.63.0",
         "react-docgen-typescript-loader": "3.7.2",
         "react-docgen-typescript-webpack-plugin": "1.1.0",
         "react-dom": "17.0.1",

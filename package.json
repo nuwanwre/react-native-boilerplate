@@ -29,7 +29,7 @@
         "react": "17.0.1",
         "react-i18next": "10.13.2",
         "react-native": "0.63.3",
-        "react-native-bootsplash": "2.2.5",
+        "react-native-bootsplash": "2.2.8",
         "react-native-code-push": "6.3.0",
         "react-native-gesture-handler": "1.7.0",
         "react-native-reanimated": "1.13.0",

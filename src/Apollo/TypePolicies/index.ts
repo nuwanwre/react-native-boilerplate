@@ -9,7 +9,6 @@ export const typePolicies: TypePolicies = {
         fields: {
             todos: {
                 read(existing: Todo[]) {
-                    console.log('reading~');
                     if (!existing) return [];
                     return existing;
                 },

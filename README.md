@@ -1,33 +1,34 @@
 # React Native Boilerplate
 
-This boilerplate enables developers to bootstrap a React Native application that uses [Hasura](https://hasura.io/) in tandem with [Apollo Graphql](https://www.apollographql.com). 
+A boilerplate to bootstrap React Native mobile applications that use Apollo Client 3 for GraphQL, with an aim to provide best developer experience and performance out of the box.
 
-Current implementation of the boilerplate uses ```React Native 0.63.2``` together with TypeScript.
+Current implementation of the boilerplate uses `React Native 0.63.2` together with TypeScript.
 
 ### Core Packages
- - **Typescript** - A superset of Javascript providing static typing, classes and interfaces.
- - **React Navigation** - Provides built-in support for navigation between screens.
- - **Apollo Boost** -Apollo packages that contain core packages to set up an app-wide store manager.
- - **Apollo Cache Persist** - Utilizes async storage to persist and rehydrate the Apollo store.
- - **Styled Components** - Powerful CSS in JS module providing template literals to support dynamic styling.
- - **Babel** - Cross platform Javascript transpiler.
- - **TSLint** - Enforces code styling, and standards. Airbnb's tslint guidelines are followed by default.
- - **CodePush** - Enables updates to be delivered seamlessley to User devices.
- - **React Native SVG** - Adds SVG support for React Native applications.
- - **React Native Bootsplash** - Enables programmatic showing of Splash Screen.
- - **React i18next** - Integrates i18n with React Native
- - **Jest and Enzyme** - Testing support for React based Projects 
+
+-   **Typescript** - A superset of Javascript providing static typing, classes and interfaces.
+-   **React Navigation** - Provides built-in support for navigation between screens.
+-   **Apollo Client 4** - Core Apollo client components to provide seamless GraphQL integration.
+-   **Apollo Cache Persist** - Utilizes async storage to persist and rehydrate the Apollo store.
+-   **Styled Components** - Powerful CSS in JS module providing template literals to support dynamic styling.
+-   **Babel** - Cross platform Javascript transpiler.
+-   **TSLint** - Enforces code styling, and standards. Airbnb's tslint guidelines are followed by default.
+-   **CodePush** - Enables updates to be delivered seamlessley to User devices.
+-   **React Native SVG** - Adds SVG support for React Native applications.
+-   **React Native Bootsplash** - Enables programmatic showing of Splash Screen.
+-   **React i18next** - Integrates i18n with React Native
+-   **Jest and Enzyme** - Testing support for React based Projects
 
 ### Running the Boilerplate
 
-1. Run ```yarn``` to install dependencies
-2. ```cd ios && pod install && cd ..``` to install iOS Pods
-3. ```yarn start``` to invoke the metro bundler
-4. ```yarn ios``` or ```yarn android``` package on respective emulators/devices.
+1. Run `yarn` to install dependencies
+2. `cd ios && pod install && cd ..` to install iOS Pods
+3. `yarn start` to invoke the metro bundler
+4. `yarn ios` or `yarn android` package on respective emulators/devices.
 
 ### Renaming the App
 
-Use ```yarn rename <Appname>``` to rename the app throughout.
+Use `yarn rename <Appname>` to rename the app throughout.
 
 ### Running Storybook Server
 
@@ -37,25 +38,23 @@ In addition to above packages, Storybook is also integrated as a development dep
 
 Until proper mocks are being added, current testing scenarios make use of a simple Hasura instance. You can find it [here](https://github.com/emperorhan/hasura-boilerplate) and hoist it together with Docker. You may update relevant variables in `.env` before running the tests.
 
-To run existing Test Suites run ```yarn test```. On occasions where some UI component with existing ```__snapshots__``` directory is being updated, run ```yarn test -u``` to update the snapshots.
+To run existing Test Suites run `yarn test`. On occasions where some UI component with existing `__snapshots__` directory is being updated, run `yarn test -u` to update the snapshots.
 
 ### Validating Commits and Tests
 
-This template also includes a sample workflow to verify merges to master via github actions. You may enable/disable it depending on your use cases. 
+This template also includes a sample workflow to verify merges to master via github actions. You may enable/disable it depending on your use cases.
 
-### Updating to Latest Version of React Native 
+### Updating to Latest Version of React Native
 
 As of present, the React Native version can be upgraded through `react-native upgrade`. However, on some occasions, this process might introduce breaking changes. If so, please follow the changes specified on React Native upgrade [helper](https://react-native-community.github.io/upgrade-helper/).
 
-
-
-### Contributing 
+### Contributing
 
 Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for instructions on how to contribute to the boilerplate.
 
 ### Folder Structure
 
-This folder structure follows the boilerplate code for the sake of brewity. 
+This folder structure follows the boilerplate code for the sake of brewity.
 
 ```
     .
@@ -167,7 +166,7 @@ This folder structure follows the boilerplate code for the sake of brewity.
 
 ### Credits and Inspiration
 
-- [pankod](https://github.com/pankod/react-native-boilerplate)
-- [ozanmanav](https://github.com/ozanmanav/react-native-boilerplate-ts)
-- [Coding Machine](https://github.com/thecodingmachine/react-native-boilerplate)
-- [React Boilerplate](https://github.com/react-boilerplate/react-boilerplate-typescript)
+-   [pankod](https://github.com/pankod/react-native-boilerplate)
+-   [ozanmanav](https://github.com/ozanmanav/react-native-boilerplate-ts)
+-   [Coding Machine](https://github.com/thecodingmachine/react-native-boilerplate)
+-   [React Boilerplate](https://github.com/react-boilerplate/react-boilerplate-typescript)

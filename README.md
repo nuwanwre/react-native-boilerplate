@@ -17,6 +17,7 @@ Current implementation of the boilerplate uses `React Native 0.63.2` together wi
 -   **React Native SVG** - Adds SVG support for React Native applications.
 -   **React Native Bootsplash** - Enables programmatic showing of Splash Screen.
 -   **React i18next** - Integrates i18n with React Native
+-   **React i18next Parser** - Localize as you code. Extract and generate localization files withou breaking a sweat.
 -   **Jest and Enzyme** - Testing support for React based Projects
 
 ### Running the Boilerplate

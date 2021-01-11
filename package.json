@@ -13,7 +13,8 @@
         "clear": "watchman watch-del-all && rm -rf /tmp/metro-bundler-cache-* && rm -rf /tmp/haste-map-react-native-packager-* && react-native start --reset-cache",
         "storybook": "start-storybook -p 7007",
         "rename": "react-native-rename",
-        "pods": "cd ios && pod install && cd .."
+        "pods": "cd ios && pod install && cd ..",
+        "i18next:extract": "i18next 'src/**/**/*.tsx' --config 'src/I18n/i18n-parser.config.js'"
     },
     "dependencies": {
         "@apollo/client": "3.2.5",
@@ -32,6 +33,7 @@
         "react-native-bootsplash": "2.2.5",
         "react-native-code-push": "6.3.0",
         "react-native-gesture-handler": "1.7.0",
+        "react-native-localize": "^2.0.1",
         "react-native-reanimated": "1.13.0",
         "react-native-safe-area-context": "3.1.7",
         "react-native-screens": "2.10.1",
@@ -70,6 +72,7 @@
         "eslint-plugin-import": "2.22.0",
         "eslint-plugin-jsx-a11y": "6.3.1",
         "eslint-plugin-react": "7.20.6",
+        "i18next-parser": "^3.6.0",
         "jest": "25.5.4",
         "jest-styled-components": "6.3.4",
         "jsdom": "15.2.1",

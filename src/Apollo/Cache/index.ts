@@ -15,7 +15,7 @@ const getCache = async (): Promise<InMemoryCache> => {
     await persistCache({
         cache,
         storage: AsyncStorage,
-        debug: true,
+        debug: __DEV__ ? true : false,
     });
 
     return cache;

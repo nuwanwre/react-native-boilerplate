@@ -40,8 +40,8 @@
         "styled-components": "4.4.1"
     },
     "devDependencies": {
-        "@babel/core": "7.11.5",
-        "@babel/runtime": "7.11.2",
+        "@babel/core": "7.13.8",
+        "@babel/runtime": "7.13.9",
         "@react-native-community/eslint-config": "2.0.0",
         "@storybook/addon-actions": "5.3.21",
         "@storybook/addon-links": "5.3.21",
@@ -61,7 +61,7 @@
         "@typescript-eslint/eslint-plugin": "2.34.0",
         "awesome-typescript-loader": "5.2.1",
         "babel-jest": "25.5.1",
-        "babel-loader": "8.1.0",
+        "babel-loader": "8.2.2",
         "babel-plugin-module-resolver": "3.2.0",
         "enzyme": "3.11.0",
         "enzyme-adapter-react-16": "1.15.4",

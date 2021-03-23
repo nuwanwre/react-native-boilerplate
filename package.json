@@ -34,7 +34,7 @@
         "react-native-code-push": "6.3.0",
         "react-native-gesture-handler": "1.7.0",
         "react-native-localize": "^2.0.1",
-        "react-native-reanimated": "1.13.0",
+        "react-native-reanimated": "1.13.3",
         "react-native-safe-area-context": "3.1.7",
         "react-native-screens": "2.10.1",
         "styled-components": "4.4.1"

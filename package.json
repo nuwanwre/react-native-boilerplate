@@ -40,8 +40,8 @@
         "styled-components": "4.4.1"
     },
     "devDependencies": {
-        "@babel/core": "7.13.8",
-        "@babel/runtime": "7.13.9",
+        "@babel/core": "7.22.9",
+        "@babel/runtime": "7.22.6",
         "@react-native-community/eslint-config": "2.0.0",
         "@storybook/addon-actions": "5.3.21",
         "@storybook/addon-links": "5.3.21",

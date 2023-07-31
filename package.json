@@ -58,7 +58,7 @@
         "@types/react-native-dotenv": "0.2.0",
         "@types/react-test-renderer": "16.9.3",
         "@types/styled-components": "4.4.3",
-        "@typescript-eslint/eslint-plugin": "2.34.0",
+        "@typescript-eslint/eslint-plugin": "6.2.1",
         "awesome-typescript-loader": "5.2.1",
         "babel-jest": "26.6.3",
         "babel-loader": "8.1.0",
